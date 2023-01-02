@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdminPage">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/WhiteSmoke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Administration"
+            android:textColor="@color/Blue"
+            android:textSize="26dp"
+            />
+    </com.google.android.material.appbar.MaterialToolbar>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="130dp"
+        android:layout_height="123dp"
+        android:layout_gravity="center"
+        android:background="@drawable/myuz2"
+        android:gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--Add student number-->
+<androidx.cardview.widget.CardView
+    android:id="@+id/add_student_number_card"
+    android:layout_width="match_parent"
+    android:layout_height="70sp"
+    android:background="@color/white"
+    app:cardCornerRadius="5sp"
+    android:layout_marginTop="10sp"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/Moccasin"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Student number"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/Blue"
+        android:textSize="20sp"/>
+
+</androidx.cardview.widget.CardView>
+
+    <!--Add student number-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_staff_card"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="@color/white"
+        app:cardCornerRadius="5sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="@color/Bisque"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Staff member"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+
+    </androidx.cardview.widget.CardView>
+<!--Add book-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_book_card"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="@color/white"
+        app:cardCornerRadius="5sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="@color/Beige"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add book"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+
+    </androidx.cardview.widget.CardView>
+    <!--Remove book-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/remove_book_card"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="@color/white"
+        app:cardCornerRadius="5sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="@color/Red"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove book"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--part of adding student number-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/add_student_linear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_marginTop="10sp"
+    android:layout_gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Student number:"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/add_student_number"
+        android:layout_width="260dp"
+        android:inputType="number"
+        android:layout_height="30dp"
+        android:textColor="@color/Black"
+        android:maxLength="9"
+        android:paddingLeft="3sp"
+        android:background="@drawable/textfiels2"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="upload"
+        android:background="@color/LightBlue"
+        android:layout_gravity="center_horizontal"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/upload_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginLeft="10sp"
+            android:background="@color/Red"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--part of adding staff member-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/add_staff_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="10sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Staff number:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/add_staff_number"
+            android:layout_width="260dp"
+            android:inputType="number"
+            android:layout_height="30dp"
+            android:textColor="@color/Black"
+            android:maxLength="5"
+            android:paddingLeft="3sp"
+            android:background="@drawable/textfiels2"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upload"
+                android:background="@color/LightBlue"
+                android:layout_gravity="center_horizontal"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_staff_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginLeft="10sp"
+                android:background="@color/Red"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--part of adding book-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Add_book_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="10sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Author:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/Book_author"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:textColor="@color/Black"
+            android:paddingLeft="3sp"
+            android:background="@drawable/textfiels2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Title:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/Book_title"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:textColor="@color/Black"
+            android:paddingLeft="3sp"
+            android:background="@drawable/textfiels2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book ISBN:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/Book_isbn"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:textColor="@color/Black"
+            android:maxLength="13"
+            android:inputType="number"
+            android:paddingLeft="3sp"
+            android:background="@drawable/textfiels2"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="5sp"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Select_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select book"
+                android:textColor="@color/white"
+                android:padding="10sp"
+                android:background="@color/SlateGray"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/book_loci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:textColor="@color/Black"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="upload"
+                android:textColor="@color/white"
+                android:background="@color/Blue"
+                android:enabled="false"
+                android:layout_gravity="center_horizontal"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_book_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10sp"
+                android:background="@color/Red"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--part of adding staff member-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/remove_book_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginTop="10sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter ISBN number of the book to be removed:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/remove_book"
+            android:layout_width="260dp"
+            android:inputType="number"
+            android:layout_height="30dp"
+            android:textColor="@color/Black"
+            android:maxLength="13"
+            android:paddingLeft="3sp"
+            android:background="@drawable/textfiels2"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/remove_book_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:background="@color/LightBlue"
+                android:layout_gravity="center_horizontal"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/remove_book_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginLeft="10sp"
+                android:background="@color/Red"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

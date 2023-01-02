@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SignUp">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/WhiteSmoke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/contact_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/icon_back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Registration"
+            android:textColor="@color/black"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        app:shapeAppearance="@style/Circular"
+        app:srcCompat="@drawable/myuz2" />
+    <!--options-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Student_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Staff_card"
+            app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Student_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/MediumBlue"
+            android:text="Student"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/Student_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Staff_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Student_card"
+            app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Staff_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/MediumSlateBlue"
+            android:text="Staff"
+            android:textColor="@color/white"
+             />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <!--Student form-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Student_linear_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+
+    <EditText
+        android:id="@+id/initials"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:background="@drawable/loginedittext"
+        android:drawableStart="@drawable/icon_person"
+        android:maxLength="3"
+        android:ems="10"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:layout_marginTop="10sp"
+        android:hint="Enter Initials"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        android:tooltipText="Enter your student number"
+        />
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/icon_person"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="italic"
+            android:hint="Enter Surname"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            android:tooltipText="Enter your student number"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Student number does not exist"
+            android:textColor="@color/Red"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/student_number"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/icon_person"
+
+            android:maxLength="9"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="italic"
+            android:hint="Enter Student No."
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            android:tooltipText="Enter your student number"
+            />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:background="@drawable/loginedittext"
+        android:drawableStart="@drawable/lock"
+        android:ems="10"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15sp"
+        android:hint="Enter password"
+        android:maxLength="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+      />
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:maxLength="10"
+            android:drawableStart="@drawable/lock"
+            android:ems="10"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15sp"
+            android:hint="Confirm password"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_up_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:text="Submit"
+        android:layout_marginTop="15sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+     />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Staff member form-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Staff_linear_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+
+        <EditText
+            android:id="@+id/initials_staff"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/icon_person"
+            android:maxLength="3"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="italic"
+            android:layout_marginTop="10sp"
+            android:hint="Enter Initials"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            android:tooltipText="Enter your student number"
+            />
+        <EditText
+            android:id="@+id/surname_staff"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/icon_person"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="italic"
+            android:hint="Enter Surname"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            android:tooltipText="Enter your student number"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/alert_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Staff number does not exist"
+                android:textColor="@color/Red"
+                android:visibility="gone"
+                />
+            <EditText
+                android:id="@+id/staff_number"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:background="@drawable/loginedittext"
+                android:drawableStart="@drawable/icon_person"
+                android:maxLength="5"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="italic"
+                android:hint="Enter Staff No."
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/white"
+                android:tooltipText="Enter your staff number"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <EditText
+            android:id="@+id/password_staff"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/lock"
+            android:maxLength="10"
+            android:ems="10"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15sp"
+            android:hint="Enter password"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            />
+        <EditText
+            android:id="@+id/confirm_password_staff"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:background="@drawable/loginedittext"
+            android:drawableStart="@drawable/lock"
+            android:ems="10"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:maxLength="10"
+            android:layout_marginTop="15sp"
+            android:hint="Confirm password"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/staff_sign_up_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn"
+            android:text="Submit"
+            android:layout_marginTop="15sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

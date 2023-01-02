@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885579150932",
+    "project_id": "library-system-4975f",
+    "storage_bucket": "library-system-4975f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885579150932:android:b3b5760b3bd3a6258b9fc1",
+        "android_client_info": {
+          "package_name": "com.cebo.librarysystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885579150932-0qbqptmifq5pk57b3bjjga0gn65omeli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoOXaUQ0bAXX9eLie8110aZY93WFfXyCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885579150932-0qbqptmifq5pk57b3bjjga0gn65omeli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
